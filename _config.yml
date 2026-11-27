@@ -1,0 +1,13 @@
+title: 学习与创作日志
+description: 记录我读过的论文、查过的问题，以及做 App 的进展。
+lang: zh-CN
+timezone: Asia/Shanghai
+permalink: /notes/:year/:month/:day/:title/
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+exclude:
+  - README.md

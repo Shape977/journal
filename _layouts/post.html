@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<article class="note">
+  <header class="note-header">
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y.%m.%d" }}</time>
+    <h1>{{ page.title | escape }}</h1>
+    {% if page.tags.size > 0 %}
+    <ul class="tags" aria-label="标签">
+      {% for tag in page.tags %}<li>{{ tag | escape }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+  </header>
+  <div class="prose">
+    {{ content }}
+  </div>
+  <footer class="note-footer"><a href="{{ '/' | relative_url }}">返回日志首页</a></footer>
+</article>
